@@ -19,6 +19,7 @@
         <AssociationConnector Association="dbMyOnlineShoppingModel.FK__Tbl_Shipp__Membe__3A81B327" ManuallyRouted="false" />
         <EntityTypeShape EntityType="dbMyOnlineShoppingModel.AdminLogin" Width="1.5" PointX="8.375" PointY="6.75" />
         <EntityTypeShape EntityType="dbMyOnlineShoppingModel.UserRegistration" Width="1.5" PointX="8.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dbMyOnlineShoppingModel.UserLogin" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

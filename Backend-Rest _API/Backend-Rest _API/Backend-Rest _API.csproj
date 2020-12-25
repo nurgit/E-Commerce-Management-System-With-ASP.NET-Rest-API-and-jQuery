@@ -152,6 +152,9 @@
     <Compile Include="Models\Tbl_SlideImage.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserLogin.cs">
+      <DependentUpon>ECommerceAPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserRegistration.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>

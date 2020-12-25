@@ -159,6 +159,7 @@
     </AssociationSet>
     <EntitySet Name="AdminLogins" EntityType="dbMyOnlineShoppingModel.AdminLogin" />
     <EntitySet Name="UserRegistrations" EntityType="dbMyOnlineShoppingModel.UserRegistration" />
+    <EntitySet Name="UserLogins" EntityType="dbMyOnlineShoppingModel.UserLogin" />
   </EntityContainer>
   <EntityType Name="AdminLogin">
     <Key>
@@ -176,5 +177,13 @@
     <Property Name="UEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Uname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Upassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="UId" />
+    </Key>
+    <Property Name="UId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

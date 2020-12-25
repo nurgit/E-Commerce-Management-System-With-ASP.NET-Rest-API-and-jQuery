@@ -36,5 +36,6 @@ namespace Backend_Rest__API.Models
         public virtual DbSet<Tbl_SlideImage> Tbl_SlideImage { get; set; }
         public virtual DbSet<AdminLogin> AdminLogins { get; set; }
         public virtual DbSet<UserRegistration> UserRegistrations { get; set; }
+        public virtual DbSet<UserLogin> UserLogins { get; set; }
     }
 }

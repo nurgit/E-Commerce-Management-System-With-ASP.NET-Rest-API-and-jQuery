@@ -106,6 +106,14 @@
           <Property Name="SlideTitle" Type="varchar" MaxLength="500" />
           <Property Name="SlideImage" Type="varchar(max)" />
         </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="UId" />
+          </Key>
+          <Property Name="UId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UPassword" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="UserRegistration">
           <Key>
             <PropertyRef Name="UId" />
@@ -162,6 +170,7 @@
           <EntitySet Name="Tbl_Roles" EntityType="Self.Tbl_Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_ShippingDetails" EntityType="Self.Tbl_ShippingDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_SlideImage" EntityType="Self.Tbl_SlideImage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRegistration" EntityType="Self.UserRegistration" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Tbl_Cart__Produc__38996AB5" Association="Self.FK__Tbl_Cart__Produc__38996AB5">
             <End Role="Tbl_Product" EntitySet="Tbl_Product" />
@@ -339,6 +348,7 @@
           </AssociationSet>
           <EntitySet Name="AdminLogins" EntityType="dbMyOnlineShoppingModel.AdminLogin" />
           <EntitySet Name="UserRegistrations" EntityType="dbMyOnlineShoppingModel.UserRegistration" />
+          <EntitySet Name="UserLogins" EntityType="dbMyOnlineShoppingModel.UserLogin" />
         </EntityContainer>
         <EntityType Name="AdminLogin">
           <Key>
@@ -356,6 +366,14 @@
           <Property Name="UEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Uname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Upassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="UId" />
+          </Key>
+          <Property Name="UId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -480,6 +498,15 @@
                 <ScalarProperty Name="Upassword" ColumnName="Upassword" />
                 <ScalarProperty Name="Uname" ColumnName="Uname" />
                 <ScalarProperty Name="UEmail" ColumnName="UEmail" />
+                <ScalarProperty Name="UId" ColumnName="UId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLogins">
+            <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.UserLogin">
+              <MappingFragment StoreEntitySet="UserLogin">
+                <ScalarProperty Name="UPassword" ColumnName="UPassword" />
+                <ScalarProperty Name="UName" ColumnName="UName" />
                 <ScalarProperty Name="UId" ColumnName="UId" />
               </MappingFragment>
             </EntityTypeMapping>

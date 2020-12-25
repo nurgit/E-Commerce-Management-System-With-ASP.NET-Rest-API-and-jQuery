@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbMyOnlineShoppingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbMyOnlineShoppingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AdminLogin">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Name="AId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AUserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="APassword" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Tbl_Cart">
           <Key>
             <PropertyRef Name="CartId" />
@@ -98,6 +106,15 @@
           <Property Name="SlideTitle" Type="varchar" MaxLength="500" />
           <Property Name="SlideImage" Type="varchar(max)" />
         </EntityType>
+        <EntityType Name="UserRegistration">
+          <Key>
+            <PropertyRef Name="UId" />
+          </Key>
+          <Property Name="UId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UEmail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Uname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Upassword" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <Association Name="FK__Tbl_Cart__Produc__38996AB5">
           <End Role="Tbl_Product" Type="Self.Tbl_Product" Multiplicity="0..1" />
           <End Role="Tbl_Cart" Type="Self.Tbl_Cart" Multiplicity="*" />
@@ -135,6 +152,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="dbMyOnlineShoppingModelStoreContainer">
+          <EntitySet Name="AdminLogin" EntityType="Self.AdminLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Cart" EntityType="Self.Tbl_Cart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_CartStatus" EntityType="Self.Tbl_CartStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
@@ -144,6 +162,7 @@
           <EntitySet Name="Tbl_Roles" EntityType="Self.Tbl_Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_ShippingDetails" EntityType="Self.Tbl_ShippingDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_SlideImage" EntityType="Self.Tbl_SlideImage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRegistration" EntityType="Self.UserRegistration" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Tbl_Cart__Produc__38996AB5" Association="Self.FK__Tbl_Cart__Produc__38996AB5">
             <End Role="Tbl_Product" EntitySet="Tbl_Product" />
             <End Role="Tbl_Cart" EntitySet="Tbl_Cart" />
@@ -157,8 +176,7 @@
             <End Role="Tbl_ShippingDetails" EntitySet="Tbl_ShippingDetails" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbMyOnlineShoppingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -319,7 +337,26 @@
             <End Role="Tbl_Members" EntitySet="Tbl_Members" />
             <End Role="Tbl_ShippingDetails" EntitySet="Tbl_ShippingDetails" />
           </AssociationSet>
+          <EntitySet Name="AdminLogins" EntityType="dbMyOnlineShoppingModel.AdminLogin" />
+          <EntitySet Name="UserRegistrations" EntityType="dbMyOnlineShoppingModel.UserRegistration" />
         </EntityContainer>
+        <EntityType Name="AdminLogin">
+          <Key>
+            <PropertyRef Name="AId" />
+          </Key>
+          <Property Name="AId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AUserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserRegistration">
+          <Key>
+            <PropertyRef Name="UId" />
+          </Key>
+          <Property Name="UId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Uname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Upassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -425,6 +462,25 @@
                 <ScalarProperty Name="SlideId" ColumnName="SlideId" />
                 <ScalarProperty Name="SlideTitle" ColumnName="SlideTitle" />
                 <ScalarProperty Name="SlideImage" ColumnName="SlideImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdminLogins">
+            <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.AdminLogin">
+              <MappingFragment StoreEntitySet="AdminLogin">
+                <ScalarProperty Name="APassword" ColumnName="APassword" />
+                <ScalarProperty Name="AUserName" ColumnName="AUserName" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRegistrations">
+            <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.UserRegistration">
+              <MappingFragment StoreEntitySet="UserRegistration">
+                <ScalarProperty Name="Upassword" ColumnName="Upassword" />
+                <ScalarProperty Name="Uname" ColumnName="Uname" />
+                <ScalarProperty Name="UEmail" ColumnName="UEmail" />
+                <ScalarProperty Name="UId" ColumnName="UId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -34,5 +34,7 @@ namespace Backend_Rest__API.Models
         public virtual DbSet<Tbl_Roles> Tbl_Roles { get; set; }
         public virtual DbSet<Tbl_ShippingDetails> Tbl_ShippingDetails { get; set; }
         public virtual DbSet<Tbl_SlideImage> Tbl_SlideImage { get; set; }
+        public virtual DbSet<AdminLogin> AdminLogins { get; set; }
+        public virtual DbSet<UserRegistration> UserRegistrations { get; set; }
     }
 }

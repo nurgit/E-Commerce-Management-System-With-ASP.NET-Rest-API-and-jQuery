@@ -17,6 +17,8 @@
         <AssociationConnector Association="dbMyOnlineShoppingModel.FK__Tbl_Cart__Produc__38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="dbMyOnlineShoppingModel.FK__Tbl_Produ__Categ__398D8EEE" ManuallyRouted="false" />
         <AssociationConnector Association="dbMyOnlineShoppingModel.FK__Tbl_Shipp__Membe__3A81B327" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbMyOnlineShoppingModel.AdminLogin" Width="1.5" PointX="8.375" PointY="6.75" />
+        <EntityTypeShape EntityType="dbMyOnlineShoppingModel.UserRegistration" Width="1.5" PointX="8.375" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

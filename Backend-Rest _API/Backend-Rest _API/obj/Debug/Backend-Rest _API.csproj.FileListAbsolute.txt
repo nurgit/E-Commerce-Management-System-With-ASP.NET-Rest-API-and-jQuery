@@ -1,0 +1,48 @@
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Backend-Rest _API.dll.config
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Backend-Rest _API.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Backend-Rest _API.pdb
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\csc.exe
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\csc.exe.config
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\csc.rsp
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\csi.exe
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\csi.rsp
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.AppContext.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.Collections.Immutable.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.IO.FileSystem.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\System.Reflection.Metadata.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\vbc.exe
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\vbc.exe.config
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\vbc.rsp
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\VBCSCompiler.exe
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\roslyn\VBCSCompiler.exe.config
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\EntityFramework.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\EntityFramework.SqlServer.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Newtonsoft.Json.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Net.Http.Formatting.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.WebHost.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\EntityFramework.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\EntityFramework.SqlServer.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Newtonsoft.Json.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Net.Http.Formatting.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.WebHost.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csprojAssemblyReference.cache
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csproj.CopyComplete
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.dll
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.pdb

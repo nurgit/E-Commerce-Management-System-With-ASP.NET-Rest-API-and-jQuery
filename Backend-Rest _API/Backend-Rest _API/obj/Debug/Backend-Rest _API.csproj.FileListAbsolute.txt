@@ -41,7 +41,8 @@ C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Ba
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.xml
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\System.Web.Http.WebHost.xml
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csprojAssemblyReference.cache
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csproj.CopyComplete
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.dll
 C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.pdb
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery\Backend-Rest _API\Backend-Rest _API\obj\Debug\Backend-Rest _API.csprojAssemblyReference.cache

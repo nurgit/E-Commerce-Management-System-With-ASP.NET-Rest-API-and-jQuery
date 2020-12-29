@@ -106,6 +106,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserRegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,6 +166,7 @@
     <Compile Include="Repository\AdminLoginRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\UserLoginRepository.cs" />
     <Compile Include="Repository\UserRegistrationRepository.cs" />

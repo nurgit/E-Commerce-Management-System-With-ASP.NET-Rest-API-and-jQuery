@@ -9,47 +9,48 @@ using System.Web.Http;
 
 namespace Backend_Rest__API.Controllers
 {
-    [RoutePrefix("api/categorys")]
-    public class CategoryController : ApiController
+    [RoutePrefix("api/products")]
+    public class ProductController : ApiController
     {
-        CategoryRepository categoryrepository = new CategoryRepository();
+        ProductRepository productRepository = new ProductRepository();
+
 
         [Route("")]
         public IHttpActionResult Get()
         {
-            return Ok(categoryrepository.GetAll());
+            return Ok(productRepository.GetAll());
         }
 
         [Route("{id}")]
         public IHttpActionResult Get(int id)
         {
-            var cat = categoryrepository.Get(id);
+            var cat = productRepository.Get(id);
             if (cat == null)
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
-            return Ok(categoryrepository.Get(id));
+            return Ok(productRepository.Get(id));
         }
 
         [Route("")]
-        public IHttpActionResult Post(Tbl_Category category)
+        public IHttpActionResult Post(Tbl_Product product)
         {
 
             //adminLoginRepository.Insert(Admin);
-            categoryrepository.Insert(category);
+            productRepository.Insert(product);
 
-            return Created("api/categorys/" + category.CategoryId, category);
+            return Created("api/products/" + product.ProductId, product);
         }
 
 
 
         [Route("{id}")]
-        public IHttpActionResult Put([FromUri] int id, [FromBody] Tbl_Category category)
+        public IHttpActionResult Put([FromUri] int id, [FromBody] Tbl_Product producty)
         {
 
-            category.CategoryId = id;
-            categoryrepository.Update(category);
-            return Ok(category);
+            producty.ProductId = id;
+            productRepository.Update(producty);
+            return Ok(producty);
         }
 
 
@@ -59,8 +60,9 @@ namespace Backend_Rest__API.Controllers
         public IHttpActionResult Delete(int id)
         {
 
-            categoryrepository.Delete(id);
+            productRepository.Delete(id);
             return StatusCode(HttpStatusCode.NoContent);
         }
+
     }
 }

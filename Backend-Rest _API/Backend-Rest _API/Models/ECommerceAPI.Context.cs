@@ -9,10 +9,12 @@
 
 namespace Backend_Rest__API.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Xml.Serialization;
+
     public partial class ECommerceAPIEntities : DbContext
     {
         public ECommerceAPIEntities()
@@ -27,9 +29,11 @@ namespace Backend_Rest__API.Models
     
         public virtual DbSet<Tbl_Cart> Tbl_Cart { get; set; }
         public virtual DbSet<Tbl_CartStatus> Tbl_CartStatus { get; set; }
+        [XmlIgnore, JsonIgnore]
         public virtual DbSet<Tbl_Category> Tbl_Category { get; set; }
         public virtual DbSet<Tbl_MemberRole> Tbl_MemberRole { get; set; }
         public virtual DbSet<Tbl_Members> Tbl_Members { get; set; }
+        [XmlIgnore, JsonIgnore]
         public virtual DbSet<Tbl_Product> Tbl_Product { get; set; }
         public virtual DbSet<Tbl_Roles> Tbl_Roles { get; set; }
         public virtual DbSet<Tbl_ShippingDetails> Tbl_ShippingDetails { get; set; }

@@ -6,8 +6,7 @@ using System.Web;
 
 namespace Backend_Rest__API.Repository
 {
-    public class UserLoginRepository:Repository<UserLogin>
+    public class ProductRepository: Repository<Tbl_Product>
     {
-
     }
 }

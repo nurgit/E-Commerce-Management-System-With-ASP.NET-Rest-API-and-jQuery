@@ -14,7 +14,26 @@
 	<input type="text" id="username"><br><br>
 	<label>Password:</label>
 	<input type="text" id="passwords"><br><br>
-	<button id="adduser">Register</button></td>
+	<button id="adduser" onclick="validate()">Register</button></td>
  <p id="rmz"></p>
+ <p id="inpmsg"></p>
+  <p id="inpmsg2"></p>
+   <p id="inpmsg3"></p>
 </body>
+<script>
+	function validate(){
+		var input = document.getElementById("useremail")
+		if(!input.checkValidity()){
+			document.getElementById("inpmsg").innerHTML = input.validationMessage
+		}
+		var input2 = document.getElementById("username")
+		if(!input2.checkValidity()){
+			document.getElementById("inpmsg2").innerHTML = input2.validationMessage
+		}
+		var input3 = document.getElementById("passwords")
+		if(!input3.checkValidity()){
+			document.getElementById("inpmsg3").innerHTML = input3.validationMessage
+		}
+	}
+	</script>
 </html>

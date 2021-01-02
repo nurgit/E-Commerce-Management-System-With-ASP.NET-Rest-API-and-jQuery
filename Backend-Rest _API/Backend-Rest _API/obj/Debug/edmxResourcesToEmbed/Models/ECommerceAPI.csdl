@@ -160,6 +160,11 @@
     <EntitySet Name="AdminLogins" EntityType="dbMyOnlineShoppingModel.AdminLogin" />
     <EntitySet Name="UserRegistrations" EntityType="dbMyOnlineShoppingModel.UserRegistration" />
     <EntitySet Name="UserLogins" EntityType="dbMyOnlineShoppingModel.UserLogin" />
+    <EntitySet Name="Feedbacks" EntityType="dbMyOnlineShoppingModel.Feedback" />
+    <AssociationSet Name="Feedback_UserRegistration" Association="dbMyOnlineShoppingModel.Feedback_UserRegistration">
+      <End Role="UserRegistration" EntitySet="UserRegistrations" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="AdminLogin">
     <Key>
@@ -177,6 +182,7 @@
     <Property Name="UEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Uname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Upassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Feedbacks" Relationship="dbMyOnlineShoppingModel.Feedback_UserRegistration" FromRole="UserRegistration" ToRole="Feedback" />
   </EntityType>
   <EntityType Name="UserLogin">
     <Key>
@@ -186,4 +192,25 @@
     <Property Name="UName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="FeedbackId" />
+    </Key>
+    <Property Name="FeedbackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UId" Type="Int32" Nullable="false" />
+    <Property Name="Feedback1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserRegistration" Relationship="dbMyOnlineShoppingModel.Feedback_UserRegistration" FromRole="Feedback" ToRole="UserRegistration" />
+  </EntityType>
+  <Association Name="Feedback_UserRegistration">
+    <End Type="dbMyOnlineShoppingModel.UserRegistration" Role="UserRegistration" Multiplicity="1" />
+    <End Type="dbMyOnlineShoppingModel.Feedback" Role="Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRegistration">
+        <PropertyRef Name="UId" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="UId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

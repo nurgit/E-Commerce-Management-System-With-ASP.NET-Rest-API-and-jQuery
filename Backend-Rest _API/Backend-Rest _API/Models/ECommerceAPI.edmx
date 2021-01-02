@@ -13,6 +13,14 @@
           <Property Name="AUserName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="APassword" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="FeedbackId" />
+          </Key>
+          <Property Name="FeedbackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UId" Type="int" Nullable="false" />
+          <Property Name="Feedback" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
         <EntityType Name="Tbl_Cart">
           <Key>
             <PropertyRef Name="CartId" />
@@ -123,6 +131,18 @@
           <Property Name="Uname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Upassword" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Association Name="Feedback_UserRegistration">
+          <End Role="UserRegistration" Type="Self.UserRegistration" Multiplicity="1" />
+          <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRegistration">
+              <PropertyRef Name="UId" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="UId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Tbl_Cart__Produc__38996AB5">
           <End Role="Tbl_Product" Type="Self.Tbl_Product" Multiplicity="0..1" />
           <End Role="Tbl_Cart" Type="Self.Tbl_Cart" Multiplicity="*" />
@@ -161,6 +181,7 @@
         </Association>
         <EntityContainer Name="dbMyOnlineShoppingModelStoreContainer">
           <EntitySet Name="AdminLogin" EntityType="Self.AdminLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Cart" EntityType="Self.Tbl_Cart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_CartStatus" EntityType="Self.Tbl_CartStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
@@ -172,6 +193,10 @@
           <EntitySet Name="Tbl_SlideImage" EntityType="Self.Tbl_SlideImage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRegistration" EntityType="Self.UserRegistration" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Feedback_UserRegistration" Association="Self.Feedback_UserRegistration">
+            <End Role="UserRegistration" EntitySet="UserRegistration" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
           <AssociationSet Name="FK__Tbl_Cart__Produc__38996AB5" Association="Self.FK__Tbl_Cart__Produc__38996AB5">
             <End Role="Tbl_Product" EntitySet="Tbl_Product" />
             <End Role="Tbl_Cart" EntitySet="Tbl_Cart" />
@@ -349,6 +374,11 @@
           <EntitySet Name="AdminLogins" EntityType="dbMyOnlineShoppingModel.AdminLogin" />
           <EntitySet Name="UserRegistrations" EntityType="dbMyOnlineShoppingModel.UserRegistration" />
           <EntitySet Name="UserLogins" EntityType="dbMyOnlineShoppingModel.UserLogin" />
+          <EntitySet Name="Feedbacks" EntityType="dbMyOnlineShoppingModel.Feedback" />
+          <AssociationSet Name="Feedback_UserRegistration" Association="dbMyOnlineShoppingModel.Feedback_UserRegistration">
+            <End Role="UserRegistration" EntitySet="UserRegistrations" />
+            <End Role="Feedback" EntitySet="Feedbacks" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AdminLogin">
           <Key>
@@ -366,6 +396,7 @@
           <Property Name="UEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Uname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Upassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Feedbacks" Relationship="dbMyOnlineShoppingModel.Feedback_UserRegistration" FromRole="UserRegistration" ToRole="Feedback" />
         </EntityType>
         <EntityType Name="UserLogin">
           <Key>
@@ -375,6 +406,27 @@
           <Property Name="UName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="FeedbackId" />
+          </Key>
+          <Property Name="FeedbackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UId" Type="Int32" Nullable="false" />
+          <Property Name="Feedback1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserRegistration" Relationship="dbMyOnlineShoppingModel.Feedback_UserRegistration" FromRole="Feedback" ToRole="UserRegistration" />
+        </EntityType>
+        <Association Name="Feedback_UserRegistration">
+          <End Type="dbMyOnlineShoppingModel.UserRegistration" Role="UserRegistration" Multiplicity="1" />
+          <End Type="dbMyOnlineShoppingModel.Feedback" Role="Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRegistration">
+              <PropertyRef Name="UId" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="UId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -508,6 +560,15 @@
                 <ScalarProperty Name="UPassword" ColumnName="UPassword" />
                 <ScalarProperty Name="UName" ColumnName="UName" />
                 <ScalarProperty Name="UId" ColumnName="UId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedbacks">
+            <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.Feedback">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="Feedback1" ColumnName="Feedback" />
+                <ScalarProperty Name="UId" ColumnName="UId" />
+                <ScalarProperty Name="FeedbackId" ColumnName="FeedbackId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

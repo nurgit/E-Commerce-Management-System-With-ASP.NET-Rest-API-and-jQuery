@@ -20,6 +20,8 @@
         <EntityTypeShape EntityType="dbMyOnlineShoppingModel.AdminLogin" Width="1.5" PointX="8.375" PointY="6.75" />
         <EntityTypeShape EntityType="dbMyOnlineShoppingModel.UserRegistration" Width="1.5" PointX="8.375" PointY="9.75" />
         <EntityTypeShape EntityType="dbMyOnlineShoppingModel.UserLogin" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbMyOnlineShoppingModel.Feedback" Width="1.5" PointX="10.625" PointY="9.875" />
+        <AssociationConnector Association="dbMyOnlineShoppingModel.Feedback_UserRegistration" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -14,9 +14,18 @@ namespace Backend_Rest__API.Models
     
     public partial class UserRegistration
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserRegistration()
+        {
+            this.Feedbacks = new HashSet<Feedback>();
+        }
+    
         public int UId { get; set; }
         public string UEmail { get; set; }
         public string Uname { get; set; }
         public string Upassword { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
     }
 }

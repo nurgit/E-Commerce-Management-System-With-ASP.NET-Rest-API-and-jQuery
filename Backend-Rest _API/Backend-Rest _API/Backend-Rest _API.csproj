@@ -130,6 +130,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ECommerceAPI.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Feedback.cs">
+      <DependentUpon>ECommerceAPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tbl_Cart.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>

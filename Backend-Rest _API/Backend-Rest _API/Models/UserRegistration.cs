@@ -9,9 +9,11 @@
 
 namespace Backend_Rest__API.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+    using System.Xml.Serialization;
+
     public partial class UserRegistration
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,6 +28,7 @@ namespace Backend_Rest__API.Models
         public string Upassword { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+       [JsonIgnore, XmlIgnore]
         public virtual ICollection<Feedback> Feedbacks { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace Backend_Rest__API.Models
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Xml.Serialization;
 
     public partial class Tbl_Category
@@ -23,6 +24,7 @@ namespace Backend_Rest__API.Models
         }
     
         public int CategoryId { get; set; }
+        [Required]
         public string CategoryName { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public Nullable<bool> IsDelete { get; set; }

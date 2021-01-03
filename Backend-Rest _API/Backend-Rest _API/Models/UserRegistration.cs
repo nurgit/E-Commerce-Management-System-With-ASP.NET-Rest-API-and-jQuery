@@ -12,6 +12,7 @@ namespace Backend_Rest__API.Models
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Xml.Serialization;
 
     public partial class UserRegistration
@@ -23,8 +24,11 @@ namespace Backend_Rest__API.Models
         }
     
         public int UId { get; set; }
+        [Required]
         public string UEmail { get; set; }
+        [Required]
         public string Uname { get; set; }
+        [Required]
         public string Upassword { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

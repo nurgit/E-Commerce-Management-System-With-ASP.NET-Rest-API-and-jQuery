@@ -14,10 +14,16 @@ namespace Backend_Rest__API.Models
     
     public partial class Order
     {
+        List<Link> links = new List<Link>();
         public int OrderId { get; set; }
         public string Product1 { get; set; }
         public string Product2 { get; set; }
         public string Product3 { get; set; }
         public string Product4 { get; set; }
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
     }
 }

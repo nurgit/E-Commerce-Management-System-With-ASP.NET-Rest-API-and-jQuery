@@ -15,10 +15,16 @@ namespace Backend_Rest__API.Models
 
     public partial class Tbl_Cart
     {
+        List<Link> links = new List<Link>();
         public int CartId { get; set; }
         public Nullable<int> ProductId { get; set; }
         public Nullable<int> MemberId { get; set; }
         public Nullable<int> CartStatusId { get; set; }
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
         [JesonIgnore, XmlIgnore]
         public virtual Tbl_Product Tbl_Product { get; set; }
     }

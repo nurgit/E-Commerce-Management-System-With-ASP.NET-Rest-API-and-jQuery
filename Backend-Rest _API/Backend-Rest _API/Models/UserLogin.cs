@@ -15,10 +15,16 @@ namespace Backend_Rest__API.Models
 
     public partial class UserLogin
     {
+        List<Link> links = new List<Link>();
         public int UId { get; set; }
         [Required]
         public string UName { get; set; }
         [Required]
         public string UPassword { get; set; }
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
     }
 }

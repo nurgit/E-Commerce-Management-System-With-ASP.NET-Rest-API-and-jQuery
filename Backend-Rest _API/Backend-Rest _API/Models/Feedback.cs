@@ -17,12 +17,18 @@ namespace Backend_Rest__API.Models
 
     public partial class Feedback
     {
+        List<Link> links = new List<Link>();
         public int FeedbackId { get; set; }
         [Required]
         public int UId { get; set; }
         [Required]
         public string Feedback1 { get; set; }
-    
+
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
         [JsonIgnore,XmlIgnore]
         public virtual UserRegistration UserRegistration { get; set; }
     }

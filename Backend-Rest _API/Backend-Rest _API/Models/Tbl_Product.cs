@@ -21,7 +21,7 @@ namespace Backend_Rest__API.Models
         {
             this.Tbl_Cart = new HashSet<Tbl_Cart>();
         }
-    
+        List<Link> links = new List<Link>();
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public Nullable<int> CategoryId { get; set; }
@@ -33,7 +33,12 @@ namespace Backend_Rest__API.Models
         public Nullable<bool> IsFeatured { get; set; }
         public Nullable<int> Quantity { get; set; }
         public Nullable<decimal> Price { get; set; }
-    
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Tbl_Cart> Tbl_Cart { get; set; }

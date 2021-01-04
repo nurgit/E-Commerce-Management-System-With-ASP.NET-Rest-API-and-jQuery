@@ -15,10 +15,16 @@ namespace Backend_Rest__API.Models
 
     public partial class AdminLogin
     {
+        List<Link> links = new List<Link>();
         public int AId { get; set; }
         [Required]
         public string AUserName { get; set; }
         [Required]
         public string APassword { get; set; }
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
     }
 }

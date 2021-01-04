@@ -22,7 +22,8 @@ namespace Backend_Rest__API.Models
         {
             this.Feedbacks = new HashSet<Feedback>();
         }
-    
+        List<Link> links = new List<Link>();
+
         public int UId { get; set; }
         [Required]
         public string UEmail { get; set; }
@@ -30,7 +31,12 @@ namespace Backend_Rest__API.Models
         public string Uname { get; set; }
         [Required]
         public string Upassword { get; set; }
-    
+        public List<Link> Links
+        {
+            get { return links; }
+
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Feedback> Feedbacks { get; set; }

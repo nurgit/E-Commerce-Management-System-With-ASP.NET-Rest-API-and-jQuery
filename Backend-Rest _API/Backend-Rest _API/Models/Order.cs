@@ -12,12 +12,12 @@ namespace Backend_Rest__API.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Feedback
+    public partial class Order
     {
-        public int FeedbackId { get; set; }
-        public int UId { get; set; }
-        public string Feedback1 { get; set; }
-    
-        public virtual UserRegistration UserRegistration { get; set; }
+        public int OrderId { get; set; }
+        public string Product1 { get; set; }
+        public string Product2 { get; set; }
+        public string Product3 { get; set; }
+        public string Product4 { get; set; }
     }
 }

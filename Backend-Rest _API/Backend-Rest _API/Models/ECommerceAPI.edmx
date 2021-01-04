@@ -21,6 +21,16 @@
           <Property Name="UId" Type="int" Nullable="false" />
           <Property Name="Feedback" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Product1" Type="varchar" MaxLength="50" />
+          <Property Name="Product2" Type="varchar" MaxLength="50" />
+          <Property Name="Product3" Type="varchar" MaxLength="50" />
+          <Property Name="Product4" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Tbl_Cart">
           <Key>
             <PropertyRef Name="CartId" />
@@ -167,7 +177,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tbl_Shipp__Membe__3A81B327">
+        <Association Name="FK__Tbl_Shipp__Membe__5629CD9C">
           <End Role="Tbl_Members" Type="Self.Tbl_Members" Multiplicity="0..1" />
           <End Role="Tbl_ShippingDetails" Type="Self.Tbl_ShippingDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,9 +189,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetBySearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <EntityContainer Name="dbMyOnlineShoppingModelStoreContainer">
           <EntitySet Name="AdminLogin" EntityType="Self.AdminLogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Cart" EntityType="Self.Tbl_Cart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_CartStatus" EntityType="Self.Tbl_CartStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
@@ -205,7 +219,7 @@
             <End Role="Tbl_Category" EntitySet="Tbl_Category" />
             <End Role="Tbl_Product" EntitySet="Tbl_Product" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tbl_Shipp__Membe__3A81B327" Association="Self.FK__Tbl_Shipp__Membe__3A81B327">
+          <AssociationSet Name="FK__Tbl_Shipp__Membe__5629CD9C" Association="Self.FK__Tbl_Shipp__Membe__5629CD9C">
             <End Role="Tbl_Members" EntitySet="Tbl_Members" />
             <End Role="Tbl_ShippingDetails" EntitySet="Tbl_ShippingDetails" />
           </AssociationSet>
@@ -379,6 +393,10 @@
             <End Role="UserRegistration" EntitySet="UserRegistrations" />
             <End Role="Feedback" EntitySet="Feedbacks" />
           </AssociationSet>
+          <FunctionImport Name="GetBySearch" ReturnType="Collection(dbMyOnlineShoppingModel.GetBySearch_Result)">
+          <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Orders" EntityType="dbMyOnlineShoppingModel.Order" />
         </EntityContainer>
         <EntityType Name="AdminLogin">
           <Key>
@@ -427,6 +445,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="GetBySearch_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="CategoryId" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="Binary" Name="ProductImage" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="CategoryId1" Nullable="true" />
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="500" />
+          <Property Type="Boolean" Name="IsActive1" Nullable="true" />
+          <Property Type="Boolean" Name="IsDelete1" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Product1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Product2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Product3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Product4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -569,6 +614,38 @@
                 <ScalarProperty Name="Feedback1" ColumnName="Feedback" />
                 <ScalarProperty Name="UId" ColumnName="UId" />
                 <ScalarProperty Name="FeedbackId" ColumnName="FeedbackId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetBySearch" FunctionName="dbMyOnlineShoppingModel.Store.GetBySearch">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbMyOnlineShoppingModel.GetBySearch_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+                <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CategoryId1" ColumnName="CategoryId1" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+                <ScalarProperty Name="IsDelete1" ColumnName="IsDelete1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Product4" ColumnName="Product4" />
+                <ScalarProperty Name="Product3" ColumnName="Product3" />
+                <ScalarProperty Name="Product2" ColumnName="Product2" />
+                <ScalarProperty Name="Product1" ColumnName="Product1" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

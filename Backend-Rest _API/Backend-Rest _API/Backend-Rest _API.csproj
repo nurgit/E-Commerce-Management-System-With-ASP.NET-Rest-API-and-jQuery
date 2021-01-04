@@ -109,6 +109,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductByCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ULoginController.cs" />
@@ -137,7 +138,13 @@
     <Compile Include="Models\Feedback.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GetBySearch_Result.cs">
+      <DependentUpon>ECommerceAPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\JesonIgnoreAttribute.cs" />
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>ECommerceAPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tbl_Cart.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>
@@ -177,6 +184,7 @@
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\FeedbackRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\UserLoginRepository.cs" />

@@ -9,12 +9,9 @@
 
 namespace Backend_Rest__API.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Xml.Serialization;
-
+    
     public partial class Tbl_Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,13 +21,11 @@ namespace Backend_Rest__API.Models
         }
     
         public int CategoryId { get; set; }
-        [Required]
         public string CategoryName { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public Nullable<bool> IsDelete { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore, XmlIgnore]
         public virtual ICollection<Tbl_Product> Tbl_Product { get; set; }
     }
 }

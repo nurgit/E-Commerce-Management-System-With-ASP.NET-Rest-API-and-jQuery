@@ -165,6 +165,10 @@
       <End Role="UserRegistration" EntitySet="UserRegistrations" />
       <End Role="Feedback" EntitySet="Feedbacks" />
     </AssociationSet>
+    <FunctionImport Name="GetBySearch" ReturnType="Collection(dbMyOnlineShoppingModel.GetBySearch_Result)">
+      <Parameter Name="search" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Orders" EntityType="dbMyOnlineShoppingModel.Order" />
   </EntityContainer>
   <EntityType Name="AdminLogin">
     <Key>
@@ -213,4 +217,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="GetBySearch_Result">
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="CategoryId" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Binary" Name="ProductImage" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="IsFeatured" Nullable="true" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="CategoryId1" Nullable="true" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsActive1" Nullable="true" />
+    <Property Type="Boolean" Name="IsDelete1" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Product1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

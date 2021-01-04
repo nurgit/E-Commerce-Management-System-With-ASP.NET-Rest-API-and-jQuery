@@ -12,6 +12,8 @@ namespace Backend_Rest__API.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ECommerceAPIEntities : DbContext
     {
@@ -38,5 +40,15 @@ namespace Backend_Rest__API.Models
         public virtual DbSet<UserRegistration> UserRegistrations { get; set; }
         public virtual DbSet<UserLogin> UserLogins { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+    
+        public virtual ObjectResult<GetBySearch_Result> GetBySearch(string search)
+        {
+            var searchParameter = search != null ?
+                new ObjectParameter("search", search) :
+                new ObjectParameter("search", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetBySearch_Result>("GetBySearch", searchParameter);
+        }
     }
 }

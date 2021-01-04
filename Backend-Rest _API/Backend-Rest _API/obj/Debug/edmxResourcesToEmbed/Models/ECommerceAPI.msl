@@ -140,5 +140,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetBySearch" FunctionName="dbMyOnlineShoppingModel.Store.GetBySearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbMyOnlineShoppingModel.GetBySearch_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+          <ScalarProperty Name="IsFeatured" ColumnName="IsFeatured" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CategoryId1" ColumnName="CategoryId1" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+          <ScalarProperty Name="IsDelete1" ColumnName="IsDelete1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="dbMyOnlineShoppingModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Product4" ColumnName="Product4" />
+          <ScalarProperty Name="Product3" ColumnName="Product3" />
+          <ScalarProperty Name="Product2" ColumnName="Product2" />
+          <ScalarProperty Name="Product1" ColumnName="Product1" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -9,6 +9,8 @@ using System.Web.Http;
 
 namespace Backend_Rest__API.Controllers
 {
+
+    [RoutePrefix("api/orders")]
     public class OrderController : ApiController
     {
         OrderRepository orderRepository = new OrderRepository();

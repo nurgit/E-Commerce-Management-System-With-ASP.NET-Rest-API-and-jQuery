@@ -11,11 +11,14 @@ namespace Backend_Rest__API.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class AdminLogin
     {
         public int AId { get; set; }
+        [Required]
         public string AUserName { get; set; }
+        [Required]
         public string APassword { get; set; }
     }
 }

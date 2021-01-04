@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Backend_Rest__API.Controllers
+{
+	public class link
+	{
+	"link":[
+	{"uri"="http://localhost:9799/api/categorys",}
+	]
+	}
+}

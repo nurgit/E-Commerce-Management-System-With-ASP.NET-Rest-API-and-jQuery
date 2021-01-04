@@ -22,12 +22,18 @@ namespace Backend_Rest__API.Models
         {
             this.Tbl_Product = new HashSet<Tbl_Product>();
         }
-    
+        List<Link> links = new List<Link>();
+
         public int CategoryId { get; set; }
         [Required]
         public string CategoryName { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public Nullable<bool> IsDelete { get; set; }
+        public List<Link> Links
+        {
+            get { return links; }
+            
+        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore,XmlIgnore]

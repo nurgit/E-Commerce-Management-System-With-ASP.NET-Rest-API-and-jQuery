@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\link.txt" />
     <Content Include="Global.asax" />
     <Content Include="Models\ECommerceAPI.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -142,6 +143,7 @@
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\JesonIgnoreAttribute.cs" />
+    <Compile Include="Models\Link.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>

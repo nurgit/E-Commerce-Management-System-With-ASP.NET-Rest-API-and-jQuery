@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace Backend_Rest__API.Controllers
@@ -30,6 +31,7 @@ namespace Backend_Rest__API.Controllers
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
+            cat.Links.Add(new Link() { Url = HttpContext.Current.Request.Url.AbsoluteUri.ToString(),Method="GET",Relation="Self" });
             return Ok(categoryrepository.Get(id));
         }
 

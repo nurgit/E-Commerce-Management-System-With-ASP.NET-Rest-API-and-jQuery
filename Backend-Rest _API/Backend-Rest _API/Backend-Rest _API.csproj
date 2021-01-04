@@ -145,6 +145,7 @@
     <Compile Include="Models\Order.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ReuiredAttribute.cs" />
     <Compile Include="Models\Tbl_Cart.cs">
       <DependentUpon>ECommerceAPI.tt</DependentUpon>
     </Compile>

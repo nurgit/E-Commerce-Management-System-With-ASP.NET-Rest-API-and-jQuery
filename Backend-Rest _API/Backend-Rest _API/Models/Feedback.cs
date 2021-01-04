@@ -9,15 +9,21 @@
 
 namespace Backend_Rest__API.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Xml.Serialization;
+
     public partial class Feedback
     {
         public int FeedbackId { get; set; }
+        [Required]
         public int UId { get; set; }
+        [Required]
         public string Feedback1 { get; set; }
     
+        [JsonIgnore,XmlIgnore]
         public virtual UserRegistration UserRegistration { get; set; }
     }
 }

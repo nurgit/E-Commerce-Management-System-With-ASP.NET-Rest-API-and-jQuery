@@ -1,3 +1,4 @@
+//////Registration function
 $(document).ready(function(){
 	$("#adduser").click(function(){
 		Registration();
@@ -51,3 +52,4 @@ var Registration=function(){
 		});
 }
 });
+

@@ -20,7 +20,7 @@ namespace Backend_Rest__API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+//config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
             //config.Formatters.Remove(config.Formatters.XmlFormatter);
             //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             //config.EnableCors(cors);

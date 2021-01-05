@@ -21,6 +21,7 @@ namespace Backend_Rest__API.Controllers
         public IHttpActionResult Get()
         {
             return Ok(categoryrepository.GetAll());
+
         }
 
         [Route("{id}")]

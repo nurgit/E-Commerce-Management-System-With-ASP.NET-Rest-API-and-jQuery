@@ -1,4 +1,5 @@
-﻿using Backend_Rest__API.Models;
+﻿using Backend_Rest__API.Attributes;
+using Backend_Rest__API.Models;
 using Backend_Rest__API.Repository;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Backend_Rest__API.Controllers
         {
             return Ok(adminLoginRepository.GetAll());
         }
-        [Route("{id}")]
+        [Route("{id}")]// BasicAuthentation
         public IHttpActionResult Get(int id)
         {
             var post = adminLoginRepository.Get(id);

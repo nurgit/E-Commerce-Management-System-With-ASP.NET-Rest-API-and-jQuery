@@ -31,7 +31,12 @@ namespace Backend_Rest__API.Controllers
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
-            cat.Links.Add(new Link() { Url = HttpContext.Current.Request.Url.AbsoluteUri.ToString(),Method="GET",Relation="Self" });
+            cat.Links.Add(new Link() { Url = "http://localhost:9799/api/categorys", Method = "GET", Relation = "Get All Cetegory" });
+            cat.Links.Add(new Link() { Url = "http://localhost:9799/api/categorys", Method = "Post", Relation = "Create New Cetegory" });
+            cat.Links.Add(new Link() { Url = HttpContext.Current.Request.Url.AbsoluteUri.ToString(), Method = "GET", Relation = "Self" });
+            cat.Links.Add(new Link() { Url = HttpContext.Current.Request.Url.AbsoluteUri.ToString(), Method = "Put", Relation = "Modify exsisting Category" });
+            cat.Links.Add(new Link() { Url = HttpContext.Current.Request.Url.AbsoluteUri.ToString(), Method = "Delete", Relation = "Remove exsisting Category" });
+           
             return Ok(categoryrepository.Get(id));
         }
 

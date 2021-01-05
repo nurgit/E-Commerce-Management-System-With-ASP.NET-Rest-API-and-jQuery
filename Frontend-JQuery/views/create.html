@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="../js/create.js"></script>
+    <style>
+        .button {
+          display: inline-block;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          color: #ffffff;
+          background-color: #7aa8b7;
+          border-radius: 6px;
+          outline: none;
+        }
+      </style>
+</head>
+<body>
+
+
+    <a class="button" href="http://localhost/InventoryDB/views/myhome.html">My Home</a>  
+    <a class="button" href="http://localhost/InventoryDB/views/myhome.html">Sign Out</a>
+    <form action="" method="post">
+        <table style="text-align: left;">
+            <tr>
+                <th>Enter Post</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="postID" name="post" rows="4" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" id="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

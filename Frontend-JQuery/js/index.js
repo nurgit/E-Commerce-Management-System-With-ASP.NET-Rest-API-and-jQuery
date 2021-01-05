@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
                         document.cookie = JSON.stringify(cookieVal);
-                        window.location.href = "http://localhost/E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery/Frontend-JQuery/Userdashboard.html";
+                        window.location.href = "http://localhost/E-Commerce-Management-System-With-ASP.NET-Rest-API-and-jQuery/Frontend-JQuery/views/Userdashboard.html";
                         alert("Authorized");
                     }
                   else
